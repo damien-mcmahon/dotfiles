@@ -1,0 +1,71 @@
+{
+  "parserOptions":
+  {
+    "ecmaVesion": 6,
+    "ecmaFeatures":
+    {
+      "impliedStrict": true
+    }
+  },
+  "rules" :
+  {
+    "semi": 2,
+    "no-inner-declarations":["error","functions"],
+    "array-callback-return": "error",
+    "complexity":["error", 14],
+    "curly": ["error", "all"],
+    "dot-notation":"error",
+    "eqeqeq":["error","always"],
+    "guard-for-in": "error",
+    "radix":["error","always"],
+    "brace-style": ["error","allman"],
+    "consistent-this": ["error", "self"],
+    "indent": ["error", 2,
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 1
+      }
+    ],
+    "key-spacing" : ["error",
+      {
+        "align":
+        {
+          "beforeColon": true,
+          "afterColon": true,
+          "on": "colon"
+        }
+      }
+    ],
+    "max-len": ["error", 200],
+    "no-mixed-spaces-and-tabs": "error",
+    "comma-spacing": ["error", {"before": false, "after": true}],
+    "no-trailing-spaces": "error",
+    "object-curly-spacing": ["error", "always"],
+    "require-jsdoc": ["error",
+      {
+        "require":
+        {
+          "FunctionDeclaration": true,
+          "MethodDefinition": false,
+          "ClassDeclaration": false
+        }
+      }
+    ],
+    "space-before-function-paren": ["error",
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
+    "space-unary-ops": "error"
+  },
+  "env":
+  {
+    "browser": true,
+    "es6": true,
+    "jasmine": true,
+    "phantomjs": true
+  }
+}
