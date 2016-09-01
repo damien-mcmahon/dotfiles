@@ -1,0 +1,10 @@
+options:
+  formatter: stylish
+files:
+  include: '**/*.s+(a|c)ss'
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+  space-after-colon: 2
