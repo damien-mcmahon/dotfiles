@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/dmcmahon/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -100,38 +99,43 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="/Users/dmcmahon/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+if [ !$RELEASE_BRANCH ]; then
+  echo "NO RELEASE"
+  RELEASE_BRANCH='ng_wfe_release_oct2016'
+fi
 
 #ALIASES
-
-#GIT
+alias sshow="!f() { git stash show stash^{/$*} -p;}; f"
+alias sapply="!f() { git stash apply stash^{$*}; }; f"
+alias work="cd ~/Work/"
 alias gpnc="gapa && gst"
 alias gcnc="gco -p && gst"
+alias wfe="work && cd WebFrontend"
 alias gfpr="git fetch --prune"
-alias grom="git rebase origin/master"
-
-#GRUNT TASKS
 alias serve="grunt server"
 alias servelegacy="grunt serverLegacy"
 alias test="grunt test"
-
-#CMC
-alias work="cd ~/Work/"
-alias wfe="work && cd WebFrontend"
-alias jira="gcm && create_jira_branch"
-
-#Utilities
-alias lx="m screensaver"
 alias pyserve="python -m SimpleHTTPServer 8000"
+alias lx="m screensaver"
 alias chromeopen="open -a /Applications/Google\ Chrome.app/ "
+alias jira="gco $JIRA_BASE_BRANCH && create_jira_branch"
 alias ghist="glola | grep"
 alias sz="source ~/.zshrc"
-
+alias grom="git rebase origin/master"
+alias gror="git rebase origin/$RELEASE_BRANCH"
+alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias v="vi"
+alias vd="~/.vim"
+alias lt="la -t"
 #TMUX
 alias tm="tmux"
 alias tat="tmux attach -d -t"
-
 #PATH
 export PATH=/Users/dmcmahon/.nvm/versions/node/v6.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/dmcmahon/.vimpkg/bin
 
+export EDITOR='vim'
 #HIGHLIGHTING - keep at end!
+source ~/.bin/tmuxinator.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting-master/zsh-syntax-highlighting.zsh
+
+export PATH="$HOME/.yarn/bin:$PATH"
