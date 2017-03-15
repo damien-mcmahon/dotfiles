@@ -97,12 +97,8 @@ source $ZSH/oh-my-zsh.sh
 
 #NVM
 export NVM_DIR="/Users/dmcmahon/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nv
 
-if [ !$RELEASE_BRANCH ]; then
-  echo "NO RELEASE"
-  RELEASE_BRANCH='ng_wfe_release_oct2016'
-fi
 
 #ALIASES
 alias sshow="!f() { git stash show stash^{/$*} -p;}; f"
