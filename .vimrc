@@ -54,7 +54,7 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
     inoremap <C-e> <Esc>A
     inoremap <C-A> <Esc>I
     "Quick escape
-    inoremap jk <esc>
+    inoremap jj <esc>
     " }}}
     " ========== NORMAL MODE ========== {{{
     "Remaps move begin/end
