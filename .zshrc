@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dmcmahon/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 #NVM
-export NVM_DIR="/Users/dmcmahon/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nv
 
 
@@ -127,7 +127,7 @@ alias lt="la -t"
 alias tm="tmux"
 alias tat="tmux attach -d -t"
 #PATH
-export PATH=/Users/dmcmahon/.nvm/versions/node/v6.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/dmcmahon/.vimpkg/bin
+export PATH=$HOME.nvm/versions/node/v6.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.vimpkg/bin
 
 export EDITOR='vim'
 #HIGHLIGHTING - keep at end!
