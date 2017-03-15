@@ -99,7 +99,6 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nv
 
-
 #ALIASES
 alias sshow="!f() { git stash show stash^{/$*} -p;}; f"
 alias sapply="!f() { git stash apply stash^{$*}; }; f"
@@ -108,9 +107,8 @@ alias gpnc="gapa && gst"
 alias gcnc="gco -p && gst"
 alias wfe="work && cd WebFrontend"
 alias gfpr="git fetch --prune"
-alias serve="grunt server"
-alias servelegacy="grunt serverLegacy"
-alias test="grunt test"
+alias serve="npm server"
+alias test="npm test"
 alias pyserve="python -m SimpleHTTPServer 8000"
 alias lx="m screensaver"
 alias chromeopen="open -a /Applications/Google\ Chrome.app/ "
