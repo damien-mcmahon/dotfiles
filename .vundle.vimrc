@@ -37,6 +37,7 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'azakus/vim-webcomponents'
 
 " }}}
 
