@@ -4,7 +4,7 @@ Odebugger;jjmd
 
 " @c
 " Console.log with my initials added
-Oconsole.log("DM =>", )€kl€kl
+Oconsole.log("DM =>", )â‚¬klâ‚¬kl
 
 " @g
 " Git commit with jira ticket
@@ -12,4 +12,13 @@ jjjwwwveweyggi" -
 
 " @j
 " JSDoc comment starter
-O/** * @name @€kb* @memberOf * * @description * Dom€kb€kb€kbSome description here * * @param {object} object description of object * @returns {object} returnObject description of return */€ku€ku€ku€ku€ku€ku€ku€ku€kr€kr€kr€kr€kr 
+O/**
+ * @name
+ @â‚¬kb* @memberOf
+ *
+ * @description
+ * Some description here
+ *
+ * @param {object} object description of object
+ * @returns {object} returnObject description of return
+ */â‚¬kuâ‚¬kuâ‚¬kuâ‚¬kuâ‚¬kuâ‚¬kuâ‚¬kuâ‚¬kuâ‚¬krâ‚¬krâ‚¬krâ‚¬krâ‚¬kr 
