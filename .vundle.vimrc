@@ -115,6 +115,9 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
     nnoremap <C-l> :call NumberToggle()<cr>
     " Easy Write
     nnoremap <leader>w :w<CR>
+    " Always move inline
+    nnoremap j gj
+    nnoremap k gk
     " }}}
     " =========== VIMRC/ZSHRC shortcuts ========== {{{
     nnoremap <leader>ev :vsp $MYVIMRC<CR>
