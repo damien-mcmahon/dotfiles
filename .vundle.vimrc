@@ -42,7 +42,7 @@ Plugin 'azakus/vim-webcomponents'
 " }}}
 
 call vundle#end()
-filteype plugin indent on
+filetype plugin indent on
 " }}}
 
 " ========= GENERAL SETTINGS ========== {{{
