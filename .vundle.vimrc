@@ -102,9 +102,11 @@ autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
     nnoremap B ^
     nnoremap E $
 
-    " $/^ doesn't do anything
+    " $/^/Q doesn't do anything
     nnoremap $ <nop>
     nnoremap ^ <nop>
+    nnoremap Q <nop>
+        
     nnoremap <leader>a :Ack!
     nnoremap <leader>g :Gstatus<CR>
     " Fold toggle
