@@ -38,7 +38,7 @@ Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'azakus/vim-webcomponents'
-
+Plugin 'w0ng/vim-hybrid.git'
 " }}}
 
 call vundle#end()
