@@ -1,0 +1,40 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "editor.fontLigatures": true,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.leader": ",",
+    "javascript.validate.enable": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility"
+                }
+            ]
+        }
+    ],
+    "vim.easymotion": true,
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true
+}
