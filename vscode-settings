@@ -4,6 +4,7 @@
     "editor.fontLigatures": true,
     "javascript.validate.enable": false,
     "vim.disableAnnoyingNeovimMessage": true,
+    "vim.foldfix": true,
     "vim.leader": ",",
     "vim.insertModeKeyBindings": [
         {
@@ -43,6 +44,8 @@
                 }
             ]
         }
+        
+
     ],
     "vim.easymotion": true,
     "editor.fontFamily": "Fira Code",
@@ -56,7 +59,9 @@
     "stylelint.enable": true,
     "css.validate": true,
     "scss.validate": true,
-    {
-      "eslint.options": { "configFile": "./tools/build/eslint-config.json" }
-    }
+    "eslint.options": { 
+        "configFile": "../shareight/eslint-config.json" 
+    },
+    "eslint.autoFixOnSave": true,
+    "window.restoreWindows": "all",
 }
