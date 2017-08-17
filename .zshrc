@@ -121,6 +121,7 @@ alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias v="vi"
 alias vd="~/.vim"
 alias lt="la -t"
+alias cnx="ping -i 5 8.8.8.8"
 #TMUX
 alias tm="tmux"
 alias tat="tmux attach -d -t"
