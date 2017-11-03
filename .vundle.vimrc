@@ -39,6 +39,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'azakus/vim-webcomponents'
 Plugin 'w0ng/vim-hybrid.git'
+Plugin 'junegunn/goyo.vim'
 " }}}
 
 call vundle#end()
