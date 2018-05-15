@@ -65,6 +65,7 @@ set foldmethod=syntax
 set noswapfile
 set modelines=1
 set laststatus=2
+set mouse=a
 " }}}
 
 "  ========== Code Completion ========= {{{
