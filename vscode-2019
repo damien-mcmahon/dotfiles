@@ -1,0 +1,68 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "vim.easymotion": true,
+    "vim.foldfix": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.leader": ",",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.files.action.showActiveFileInExplorer"
+                },
+                {
+                    "command": "workbench.action.focusSideBar"
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "a"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.view.search"
+                }
+            ]
+        },
+        {
+            "before": ["<C-n>"],
+            "after": [],
+            "commands": [
+                {
+                "command": "workbench.action.toggleSidebarVisibility"
+                }
+            ]
+        },
+        {
+            "before": ["<C-p>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen"
+                }
+            ]
+        }
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.minimap.enabled": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+}
