@@ -9,7 +9,6 @@ Plugin 'VundleVim/Vundle.vim'
 " }}}
 "
 " =========== VUNDLE PLUGINS ========== {{{
-Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
@@ -21,9 +20,7 @@ Plugin 'othree/jspc.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'ternjs/tern_for_vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'burnettk/vim-angular'
 Plugin 'skammer/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'tpope/vim-dispatch'
@@ -38,9 +35,13 @@ Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'azakus/vim-webcomponents'
-Plugin 'w0ng/vim-hybrid.git'
 Plugin 'junegunn/goyo.vim'
 Plugin 'styled-components/vim-styled-components'
+Plugin 'mxw/vim-jsx'
+Plugin 'w0rp/ale'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 " }}}
 
 call vundle#end()
@@ -66,6 +67,7 @@ set noswapfile
 set modelines=1
 set laststatus=2
 set mouse=a
+set backspace=2
 " }}}
 
 "  ========== Code Completion ========= {{{
@@ -73,6 +75,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "  }}}
+"
 "  ========== Folding ========== {{{
 set foldenable
 set foldlevelstart=2
@@ -80,11 +83,15 @@ set foldnestmax=10
 set foldmethod=indent
 " }}}
 
-" ========== Colours ========== {{{
-set background=dark
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme hybrid
+" ======== COLORSCHEME ======== {{{
+  set t_Co=256
+  syntax on
+  colorscheme onehalfdark
+  set cursorline
+  
+  let g:airline_theme='onehalfdark'
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " ========== Javascript ========== {{{
@@ -198,11 +205,6 @@ let g:ctrlp_working_path_mode = 0
 set wildignore+=*/tmp/*,*/node_modules/*,*/app/generated/*,*.so,*.swp,*.zip
 " }}}
 
-" ========== Angular Vim ========== {{{
-let g:angular_source_directory = 'app/scripts'
-let g:angular_test_directory = 'test/spec/'
-" }}}
-
 " =========== Functions =========== {{{
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -213,27 +215,17 @@ function! NumberToggle()
 endfunc
 " }}}
 
-" ========== Vim-Test ========== {{{
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>A :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>G :TestVisit<CR>
-
-let test#strategy = "dispatch"
-let g:test#preserve_screen = 1
-" }}}
-
 " =========== ACK! ========= {{{
 let g:ack_use_dispatch = 1
 " }}}
 
-" =========== JS Libs ========== {{{
-let g:used_javascript_libs = 'angularjs, angularui, angularuirouter, jasmine, react'
-"  }}}
-
 " ========== YCM ========== {{{
 let g:ycm_autoclose_preview_window_after_completion = 1
+" }}}
+
+" ============== Prettier =========== {{{
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
