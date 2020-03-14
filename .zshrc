@@ -133,4 +133,6 @@ export EDITOR='vim'
 source ~/.bin/tmuxinator.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting-master/zsh-syntax-highlighting.zsh
 
+# iTerm start a Tmux session
+#tmux attach -t base || tmux new -s base
 export PATH="$HOME/.yarn/bin:$PATH"
